@@ -23,10 +23,21 @@
 , "node": true
 , "noempty": false
 , "nonew": true
+, "predef":
+  [ "Backbone"
+  , "describe"
+  , "it"
+  , "before"
+  , "beforeEach"
+  , "after"
+  , "afterEach"
+  ]
 , "quotmark": "single"
 , "smarttabs": true
 , "strict": false
 , "trailing": false
 , "undef": true
 , "unused": true
+, "-W079": true
+, "-W069": true
 }
