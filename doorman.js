@@ -17,9 +17,16 @@ module.exports = function (load) {
     }
   }
 
-  allow.list = function() {
+  function list() {
     return ids
   }
+
+  function has(id) {
+    return !!ids[id]
+  }
+
+  allow.list = list
+  allow.has = has
 
   return allow
 }

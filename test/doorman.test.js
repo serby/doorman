@@ -17,21 +17,25 @@ describe('doorman', function () {
     })
   })
 
-  it('should return true with a new ID', function () {
-    var dedupe = doorman()
-    assert.ok(dedupe('1'))
-  })
+  describe('allow()', function () {
 
-  it('should return false with a used ID', function () {
-    var dedupe = doorman()
-    assert.ok(dedupe('1'))
-    assert.equal(dedupe('1'), false)
-  })
+    it('should return true with a new ID', function () {
+      var dedupe = doorman()
+      assert.ok(dedupe('1'))
+    })
 
-  it('should convert integers to string', function () {
-    var dedupe = doorman()
-    assert.ok(dedupe('1'))
-    assert.equal(dedupe('1'), false)
+    it('should return false with a used ID', function () {
+      var dedupe = doorman()
+      assert.ok(dedupe('1'))
+      assert.equal(dedupe('1'), false)
+    })
+
+    it('should convert integers to string', function () {
+      var dedupe = doorman()
+      assert.ok(dedupe('1'))
+      assert.equal(dedupe('1'), false)
+    })
+
   })
 
   describe('list()', function () {
@@ -46,6 +50,21 @@ describe('doorman', function () {
       dedupe('2')
       assert.deepEqual(dedupe.list(), { '1': true, '2': true })
     })
+  })
+
+  describe('has()', function () {
+
+    it('should return false if an item has not yet been allowed', function () {
+      var dedupe = doorman()
+      assert.equal(dedupe.has('1'), false)
+    })
+
+    it('should return true if an item has been allowed', function () {
+      var dedupe = doorman()
+      dedupe('1')
+      assert.equal(dedupe.has('1'), true)
+    })
+
   })
 
 
