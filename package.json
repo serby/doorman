@@ -1,24 +1,24 @@
-{ "author": "Paul Serby <paul@serby.net>"
-, "name": "doorman"
-, "description": "Only allow a ID to be registered once."
-, "version": "0.0.2"
-, "tags": []
-, "repository":
-  { "type": "git"
-  , "url": "git@github.com:serby/doorman"
-  }
-, "main": "doorman.js"
-, "scripts":
-  { "test": "make test"
-  , "prepublish": "make qa && npm prune"
-  }
-, "engines":
-  { "node": ">=0.8"
-  }
-, "dependencies":
-  {
-  }
-, "devDependencies":
-  { "mocha": "*"
+{
+  "author": "Paul Serby <paul@serby.net>",
+  "name": "doorman",
+  "description": "Only allow a ID to be registered once.",
+  "version": "0.0.2",
+  "tags": [],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:serby/doorman"
+  },
+  "main": "doorman.js",
+  "scripts": {
+    "test": "make test",
+    "prepublish": "make qa && npm prune"
+  },
+  "engines": {
+    "node": ">=0.8"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "jshint": "~1.1.0"
   }
 }
