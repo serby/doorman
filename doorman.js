@@ -3,7 +3,7 @@ module.exports = function (load) {
 
   var ids = load || {}
 
-  // Ensure a object is loaded
+  // Ensure an object is loaded
   if ((typeof ids !== 'object') || (Array.isArray(ids))) {
     throw new Error('Must provide an object')
   }
@@ -17,9 +17,16 @@ module.exports = function (load) {
     }
   }
 
-  allow.list = function() {
+  function list() {
     return ids
   }
+
+  function has(id) {
+    return !!ids[id]
+  }
+
+  allow.list = list
+  allow.has = has
 
   return allow
 }
