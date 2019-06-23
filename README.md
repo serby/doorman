@@ -2,7 +2,7 @@
 
 Only allow a ID to be registered once.
 
-[![build status](https://secure.travis-ci.org/serby/doorman.png)](http://travis-ci.org/serby/doorman)
+[![build status](https://secure.travis-ci.org/serby/doorman.png)](http://travis-ci.org/serby/doorman) [![Greenkeeper badge](https://badges.greenkeeper.io/serby/doorman.svg)](https://greenkeeper.io/)
 
 ## Installation
 
